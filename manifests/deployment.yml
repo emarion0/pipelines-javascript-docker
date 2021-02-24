@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: emarionpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emarionpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: emarionpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: emarionpipelinesjavascriptdocker 
+          image: mycontainerregistryxyz154.azurecr.io/emarionpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
